@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" box="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <title>Chiaki Matsuno</title>
+
+  <style>
+
+  </style>
+  </head>
+  <body>
+    <div class="popup">
+      <header>
+        <span>Contact Me</span>
+        <div class="close"><i class="uil uil-times"></i></div>
+      </header>
+      <div class="content">
+        <p>You can reach me at the following:</p>
+        <ul class="icons">
+          <a href="https://www.linkedin.com/in/chiaki-matsuno-b2888bbb/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/cmatsu" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:cmatsu3201@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+          <a href="tel:206-696-0507"><i class="fas fa-phone-alt" target="_blank"></i></a>
+        </ul>
+        <p>My resume is available in PDF format <a href="#enterlinkhere">here</a>.</p>
+      </div>
+    </div>
+    <div class="navbar">
+      <!-- <div><img class="logo" src="images/favicon.png" alt="logo"></div> -->
+      <div class="navLinks" id="nav">
+        <a href="index.html" class="btn">Home</a>
+        <a href="about.html" class="btn">About</a>
+        <a href="work.html" class="btn active">Work</a>
+        <a href="#other" class="btn">Other</a>
+        <a href="#contact" class="btn contactBtn">Contact</a>
+        <a href="javascript:void(0);" class="burgMenu" onclick="sortNav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="mainContent">
+      <h2>Work</h2>
+      <p>All of my work is archived below. Feel free to use the filter buttons to see work specific to a tag.</p>
+          <!-- MAIN (Center website) -->
+          <div class="workGallery">
+          <div id="filterBtnContainer">
+            <button class="filterBtn active" onclick="filterSelection('all')"> show all</button>
+            <button class="filterBtn" onclick="filterSelection('gis')"> gis</button>
+            <button class="filterBtn" onclick="filterSelection('design')"> design</button>
+            <button class="filterBtn" onclick="filterSelection('art')"> art</button>
+          </div>
+          <!-- Portfolio  Grid -->
+          <div class="row">
+            <div class="filterColumn gis">
+              <div class="box">
+                <img src="images/img.png" alt="Mountains" style="width:100%">
+                <h4>Mountains</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="filterColumn gis">
+              <div class="box">
+              <img src="images/img.png" alt="Lights" style="width:100%">
+                <h4>Lights</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="filterColumn gis">
+              <div class="box">
+              <img src="images/img.png" alt="gis" style="width:100%">
+                <h4>Forest</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+
+            <div class="filterColumn design">
+              <div class="box">
+                <img src="images/img.png" alt="Car" style="width:100%">
+                <h4>Retro</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="filterColumn design">
+              <div class="box">
+              <img src="images/img.png" alt="Car" style="width:100%">
+                <h4>Fast</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="filterColumn design">
+              <div class="box">
+              <img src="images/img.png" alt="Car" style="width:100%">
+                <h4>Classic</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+
+            <div class="filterColumn art">
+              <div class="box">
+                <img src="images/img.png" alt="Car" style="width:100%">
+                <h4>Girl</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="filterColumn art">
+              <div class="box">
+              <img src="images/img.png" alt="Car" style="width:100%">
+                <h4>Man</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="filterColumn art">
+              <div class="box">
+              <img src="images/img.png" alt="Car" style="width:100%">
+                <h4>Woman</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+          <!-- END GRID -->
+          </div>
+
+          <!-- END MAIN -->
+    </div>
+      </div>
+      <div class="footer">
+      <button class="scrollToTopBtn"><i class="fa fa-arrow-up"></i></button>
+      </div>
+    </div>
+    <script src="filter.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
