@@ -10,7 +10,6 @@
 
   <style>
 
-
   </style>
   </head>
   <body>
@@ -30,115 +29,81 @@
         <p>My resume is available in PDF format <a href="#enterlinkhere">here</a>.</p>
       </div>
     </div>
-    <div class="topnav" id="nav">
-      <img class="logo" src="images/logo.png" alt="logo">
-      <a href="#" class="btn active">Home</a>
-      <a href="#about" class="btn">About</a>
-      <a href="#work" class="btn">Work</a>
-      <a href="#other" class="btn">Other</a>
-      <a href="#contact" class="btn contactBtn">Contact</a>
-      <a href="javascript:void(0);" class="burgMenu" onclick="sortNav()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-    <div class="mainContent">
-      <h1 id="highlights">Hi. I'm Chiaki, and welcome to my portfolio.</h1>
-      <div class="staticBox">
-        <p>I'm a graduate student at UW Tacoma studying MS in Geospatial Technologies set to graduate in August of 2020. I previously graduated from UW Seattle in Spring 2020 with a BA in Geography.</p>
-        <p>My interests are map creation and web design, as well as visual design.
-          My interests are map creation and web design. My motto is to create maps that reflect socioeconomic issues that are not only easy to understand but also pleasing to look at.</p>
-        <p>You can read more about me <a href="about.html">here</a></p>
+    <div class="navbar">
+      <!-- <div><img class="logo" src="images/favicon.png" alt="logo"></div> -->
+      <div class="navLinks" id="nav">
+        <a href="index.html" class="btn active">Home</a>
+        <a href="about.html" class="btn">About</a>
+        <a href="work.html" class="btn">Work</a>
+        <a href="#other" class="btn">Other</a>
+        <a href="#contact" class="btn contactBtn">Contact</a>
+        <a href="javascript:void(0);" class="burgMenu" onclick="sortNav()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
+    </div>
+
+    <div class="mainContent">
+      <h1>Hi, I'm Chiaki. Welcome to my portfolio.</h1>
+
+          <div class="staticBox">
+            <p>I'm a graduate student at UW Tacoma studying MS in Geospatial Technologies set to graduate in August of 2020. I previously graduated from UW Seattle in Spring 2020 with a BA in Geography.</p>
+            <p>My interests are map creation and web design, as well as visual design.
+              My interests are map creation and web design. My motto is to create maps that reflect socioeconomic issues that are not only easy to understand but also pleasing to look at.</p>
+            <p>You can read more about me <a href="about.html">here</a></p>
+
+      </div>
+
       <h1></h1>
-      <h1 id="highlights">Work Highlights</h1>
-      <div class="grid2x2">
-        <div class="box box1">
-            <img src="images/img.png" alt="Bear" style="width:100%">
-            <p>desc</p>
+
+      <div  id="highlights">
+        <h1>Work Highlights</h1>
+            <!-- Portfolio Gallery Grid -->
+      <div class="row">
+        <div class="column">
+          <div class="box">
+            <img src="images/img.png" alt="Mountains" style="width:100%">
+            <h3>My Work</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          </div>
         </div>
-        <div class="box box2">
-          <img src="images/img.png" alt="Bear" style="width:100%">
-          <p>desc</p>
+        <div class="column">
+          <div class="box">
+          <img src="images/img.png" alt="Lights" style="width:100%">
+            <h3>My Work</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          </div>
         </div>
-        <div class="box box3">
-          <img src="images/img.png" alt="Bear" style="width:100%">
-          <p>desc</p>
+        <div class="column">
+          <div class="box">
+          <img src="images/img.png" alt="Nature" style="width:100%">
+            <h3>My Work</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          </div>
         </div>
-        <div class="box box4">
-          <img src="images/img.png" alt="Bear" style="width:100%">
-          <p>desc</p>
+        <div class="column">
+          <div class="box">
+          <img src="images/img.png" alt="Mountains" style="width:100%">
+            <h3>My Work</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          </div>
         </div>
-        <!-- <div class="box box5">
-          <img src="images/img.png" alt="Bear" style="width:100%">
-          <p>desc</p>
-        </div> -->
+      <!-- END GRID -->
+      </div></div>
+
+          <div class="box">
+            <img src="images/logo.png" alt="Bear" style="width:100%">
+            <h3>Some Other Work</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+
+      </div>
+
 
       </div>
       <div class="footer">
       <button class="scrollToTopBtn"><i class="fa fa-arrow-up"></i></button>
       </div>
     </div>
-
-    <script>
-    // highlight selected option in navigation
-    var header = document.getElementById("nav");
-    var btns = header.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-        if (current.length > 0) {
-          current[0].className = current[0].className.replace(" active", "");
-        }
-        this.className += " active";
-      });
-    }
-    function sortNav() {
-      var x = document.getElementById("nav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-
-    //modal contact
-    const viewBtn = document.querySelector(".contactBtn"),
-    popup = document.querySelector(".popup"),
-    close = popup.querySelector(".close");
-    viewBtn.onclick = ()=>{
-      popup.classList.toggle("show");
-    }
-    close.onclick = ()=>{
-      viewBtn.click();
-    }
-
-    //scroll to top
-    var scrollToTopBtn = document.querySelector(".scrollToTopBtn")
-    var rootElement = document.documentElement
-
-    function handleScroll() {
-      // Do something on scroll
-      var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
-      if ((rootElement.scrollTop / scrollTotal ) > 0.80) {
-        // Show button
-        scrollToTopBtn.classList.add("showBtn")
-      } else {
-        // Hide button
-        scrollToTopBtn.classList.remove("showBtn")
-      }
-    }
-
-    function scrollToTop() {
-      // Scroll to top logic
-      rootElement.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      })
-    }
-    scrollToTopBtn.addEventListener("click", scrollToTop)
-    document.addEventListener("scroll", handleScroll)
-
-
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
