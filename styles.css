@@ -93,6 +93,19 @@
     margin:auto;
   }
 
+  .pageBtn {
+    color: #ffffff;
+    background-color: #71a8f9;
+    border-radius: 3.125em;
+    padding: 0 15px 0 15px;
+  }
+
+  a:hover.pageBtn {
+    background-color: #5a8ad1;
+    color: #ffffff;
+    transition: all 0.5s ease 0s;
+  }
+
   .navLinks a:hover {
     background-color: #bdd7ff;
     color: #383f41;
@@ -324,15 +337,18 @@
     max-height: 500px;
     padding: 15px;
   }
+
   .staticBox {
     padding: 30px 50px;
   }
+
   a > .box {
     color: #4a2e17;
   }
   a:hover > .box {
     color: #78604d;
   }
+
   .staticBox {
     margin-bottom: 2.5em;
   }
