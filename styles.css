@@ -1,22 +1,22 @@
   @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
   @font-face {
-  font-family: 'Maax Medium';
-  src: url('Maax/Maax-Medium.eot');
-  src: url('Maax/Maax-Medium.eot?#iefix') format('embedded-opentype'),
-  url('Maax/Maax-Medium.woff') format('woff'),
-  url('Maax/Maax-Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Maax Medium';
+    src: url('Maax/Maax-Medium.eot');
+    src: url('Maax/Maax-Medium.eot?#iefix') format('embedded-opentype'),
+    url('Maax/Maax-Medium.woff') format('woff'),
+    url('Maax/Maax-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
   }
   @font-face {
-  font-family: 'Maax';
-  src: url('Maax/Maax.eot');
-  src: url('Maax/Maax.eot?#iefix') format('embedded-opentype'),
-  url('Maax/Maax.woff') format('woff'),
-  url('Maax/Maax.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Maax';
+    src: url('Maax/Maax.eot');
+    src: url('Maax/Maax.eot?#iefix') format('embedded-opentype'),
+    url('Maax/Maax.woff') format('woff'),
+    url('Maax/Maax.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
   }
   body {
     margin:auto;
@@ -27,6 +27,7 @@
     -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
   }
+  
   ::-webkit-scrollbar {
     display: none;
   }
