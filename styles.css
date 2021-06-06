@@ -27,7 +27,7 @@
     -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
   }
-  
+
   ::-webkit-scrollbar {
     display: none;
   }
@@ -35,7 +35,7 @@
   .logo {
     cursor: pointer;
     color: #fffee7;
-    max-height: 5.000em;r
+    max-height: 5.000em;
   }
 
   .logoBar {
@@ -172,6 +172,10 @@
     .footer {
       margin-top: 2.5em;
     }
+
+    .scrollToTopBtn {
+      position: relative;
+    }
   }
 
   /*scroll to top*/
@@ -203,12 +207,6 @@
         right: 20px;
       }
     }
-
-  @media screen and (max-width: 600px) {
-    .scrollToTopBtn {
-      position: relative;
-    }
-  }
 
   .showBtn {
     opacity: 1;
@@ -245,7 +243,7 @@
   .row,
   .row > .filterColumn {
     padding: 8px;
-  }
+  }l
 
   /* Create four equal columns that floats next to each other */
   .column, .filterColumn {
