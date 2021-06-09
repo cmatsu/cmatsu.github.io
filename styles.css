@@ -1,52 +1,65 @@
-  /*@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');*/
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
-  body {
-    margin:auto;
-    font-family: 'Varela Round', sans-serif;
-    /* font-family: 'Maax', sans-serif; */
-    background-color: #fefaef;
-    text-align: center;
-    -ms-overflow-style: none;  /* IE and Edge */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Offside&display=swap');
+body {
+  margin:auto;
+  font-family: "Varela Round", sans-serif;
+  /* font-family: 'Maax', sans-serif; */
+  background-color: #fefaef;
+  text-align: center;
+  -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  }
+}
 
-  ::-webkit-scrollbar {
-    display: none;
-  }
+h1, h3, .navLinks a {
+/* font-family: "Montserrat", sans-serif; */
+  font-family: "Offside", cursive;
+}
 
-  .logo {
-    cursor: pointer;
-    color: #fffee7;
-    max-height: 5.000em;
-  }
+h2 {
+  font-size: 15pt;
+  font-weight: normal;
+}
 
-  .logoBar {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    width: 100vw;
-  }
 
-  .mainContent {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width:80%;
-    max-width:1000px;
-    margin:auto;
-  }
+::-webkit-scrollbar {
+  display: none;
+}
 
-  .navLinks {
-    overflow: hidden;
+.logo {
+  cursor: pointer;
+  color: #fffee7;
+  max-height: 5.000em;
+}
+
+.logoBar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+}
+
+.mainContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width:80%;
+  max-width:1000px;
+  margin:auto;
+}
+
+.navLinks {
+  overflow: hidden;
     background-color: #71a8f9;
     min-width: 80%;
     margin: auto;
   }
 
-  h2 {
-    font-size: 15pt;
-    font-weight: normal;
-  }
+
 
   a {
     text-decoration: none;
