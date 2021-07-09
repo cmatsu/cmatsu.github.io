@@ -5,10 +5,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Offside&display=swap');
-body {
-  margin:auto;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Varela Round", sans-serif;
-  /* font-family: 'Maax', sans-serif; */
+}
+
+body {
   background-color: #fefaef;
   text-align: center;
   -ms-overflow-style: none;  /* IE and Edge */
@@ -18,6 +23,10 @@ body {
 h1, h3, .navLinks a {
 /* font-family: "Montserrat", sans-serif; */
   font-family: "Offside", cursive;
+}
+
+h1 {
+  margin-bottom: 0.75em;
 }
 
 h2 {
@@ -52,14 +61,16 @@ h2 {
   margin:auto;
 }
 
+.navbar{
+  width:90%;
+  max-width:1000px;
+}
+
 .navLinks {
   overflow: hidden;
     background-color: #71a8f9;
-    min-width: 80%;
     margin: auto;
   }
-
-
 
   a {
     text-decoration: none;
@@ -101,6 +112,10 @@ h2 {
     padding: 0 15px 0 15px;
   }
 
+  .pageBtn p {
+    margin: 16px 0px;
+  }
+
   a:hover.pageBtn {
     background-color: #5a8ad1;
     color: #ffffff;
@@ -138,6 +153,9 @@ h2 {
   }
 
   @media screen and (max-width: 767px) {
+    h1 {
+      margin-top: 24px;
+    }
     .navLinks a:not(:first-child){display: none;}
     .navLinks a.burgMenu {
       float: right;
@@ -158,6 +176,9 @@ h2 {
   }
 
   @media screen and (max-width: 767px) {
+    .navbar{
+      width:100%;
+    }
     .navLinks.responsive {position: relative;}
     .navLinks.responsive .burgMenu {
       position: absolute;
@@ -169,56 +190,59 @@ h2 {
       display: block;
       text-align: left;
     }
-    .footer {
-      margin-top: 2.5em;
+    footer {
+      margin-top: 3em;
     }
 
     .scrollToTopBtn {
-      position: relative;
+      /* place it at the bottom right corner */
+      position: fixed;
+      bottom: 75px;
+      left: 46%;
     }
-  }
-
-  /*scroll to top*/
-  .scrollToTopBtn {
-    background-color: #71a8f9;
-    border: none;
-    border-radius: 50%;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 48px;
-    width: 48px;
-
-    /* keep it at the top of everything else */
-    z-index: 100;
-    /* hide with opacity */
-    opacity: 0;
-    /* also add a translate effect */
-    transform: translateY(100px);
-    /* and a transition */
-    transition: all .5s ease
   }
 
   @media screen and (min-width: 768px) {
       .scrollToTopBtn {
         /* place it at the bottom right corner */
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        bottom: 30px;
+        right: 30px;
       }
     }
 
-  .showBtn {
-    opacity: 1;
-    transform: translateY(0)
-  }
+    /*scroll to top*/
+    .scrollToTopBtn {
+      background-color: #71a8f9;
+      border: none;
+      border-radius: 50%;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 48px;
+      width: 48px;
 
-  .footer {
+
+      /* keep it at the top of everything else */
+      z-index: 100;
+      /* hide with opacity */
+      opacity: 0;
+      /* also add a translate effect */
+      transform: translateY(100px);
+      /* and a transition */
+      transition: all .5s ease
+    }
+
+    .showBtn {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+  footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    margin-bottom: 2.5em;
+    justify-content: flex-end;
+    padding: 16px;
+    margin-bottom: 20px;
   }
 
   /* grid */
@@ -232,6 +256,16 @@ h2 {
     margin: 8px -16px;
     box-sizing: border-box;
 
+  }
+
+  .item {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   /* Add padding BETWEEN each column */
@@ -313,6 +347,8 @@ h2 {
     }
   }
 
+
+
   .boxContents {
     display:flex;
     justify-content: center;
@@ -332,7 +368,7 @@ h2 {
   }
 
   .box {
-    min-height: 500px;
+    min-height: 300px;
     max-height: 500px;
     padding: 15px;
   }
@@ -361,7 +397,7 @@ h2 {
     align-items: center;
     overflow: hidden;
     position: relative;
-    min-height: 200px;
+    min-height: 100px;
   }
 
   .fill img {
@@ -376,7 +412,36 @@ h2 {
     background: #bdd7ff;
   }
 
-  .popup{
+  .container
+  {
+    position: relative;
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+  }
+
+  .container#blur.active
+  {
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .container .content {
+    position: relative;
+    max-width: 800px;
+  }
+
+  .container .content img {
+    max-width: 100%;
+    display:block;
+  }
+
+  #popup {
     z-index: 9999;
     position: absolute;
     left: 50%;
@@ -384,7 +449,7 @@ h2 {
     background: #fff;
     padding: 25px;
     border-radius: 15px;
-    top: -150%;
+    top: 50%;
     max-width: 380px;
     width: 100%;
     opacity: 0;
@@ -396,44 +461,44 @@ h2 {
                 transform 0.2s 0s ease-in-out;
   }
 
-  .popup.show{
+  #popup.active {
     top: 50%;
     opacity: 1;
     pointer-events: auto;
+
     transform:translate(-50%, -50%) scale(1);
     transition: top 0s 0s ease-in-out,
                 opacity 0.2s 0s ease-in-out,
                 transform 0.2s 0s ease-in-out;
-
   }
 
-  .popup :is(header, .field){
+  #popup :is(header, .field){
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  .popup :is(.icons){
+  #popup :is(.icons){
     display: flex;
     align-items: left;
   }
 
-  .popup header{
+  #popup header{
     padding-bottom: 15px;
     border-bottom: 1px solid #ebedf9;
   }
-  .popup header span{
+  #popup header span{
     font-size: 21px;
     font-weight: 600;
   }
-  .popup header .close, .icons a{
+  #popup header .close, .icons a{
     display: flex;
     align-items: center;
     border-radius: 50%;
     justify-content: center;
     transition: all 0.3s ease-in-out;
   }
-  .popup header .close{
+  #popup header .close{
     color: #878787;
     font-size: 17px;
     background: #f2f3fb;
@@ -441,13 +506,13 @@ h2 {
     width: 33px;
     cursor: pointer;
   }
-  .popup header .close:hover{
+  #popup header .close:hover{
     background: #ebedf9;
   }
-  .popup .content{
+  #popup .content{
     margin: 20px 0;
   }
-  .popup .icons{
+  #popup .icons{
     margin: 15px 0 20px 0;
   }
   .content p{
