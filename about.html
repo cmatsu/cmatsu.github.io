@@ -11,10 +11,10 @@
   </style>
   </head>
   <body>
-    <div class="popup">
+    <div id="popup">
       <header>
         <span>Contact Me</span>
-        <div class="close"><i class="uil uil-times"></i></div>
+        <div class="close" onclick="toggle()"><i class="uil uil-times"></i></div>
       </header>
       <div class="content">
         <p>You can reach me at the following:</p>
@@ -27,27 +27,30 @@
         <!-- <p>My resume is available in PDF format <a href="#enterlinkhere">here</a>.</p> -->
       </div>
     </div>
-    <div class="navbar">
-      <!-- <div><img class="logo" src="images/favicon.png" alt="logo"></div> -->
-      <div class="navLinks" id="nav">
-        <a href="index.html" class="btn">Home</a>
-        <!-- <a href="about.html" class="btn active">About</a> -->
-        <a href="work.html" class="btn">Work</a>
-        <a href="#contact" class="btn contactBtn">Contact</a>
-        <a href="javascript:void(0);" class="burgMenu" onclick="sortNav()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    </div>
-    <div class="mainContent">
-      <h1>About me and my background</h1>
-        <div class="staticBox">
-          <p></p>
+    <div class="container" id="blur">
+      <div class="navbar">
+        <!-- <div><img class="logo" src="images/favicon.png" alt="logo"></div> -->
+        <div class="navLinks" id="nav">
+          <a href="index.html" class="btn active">Home</a>
+          <!-- <a href="about.html" class="btn">About</a> -->
+          <a href="work.html" class="btn">Work</a>
+          <a href="#contact" onclick="toggle()" class="btn contactBtn">Contact</a>
+          <a href="javascript:void(0);" class="burgMenu" onclick="sortNav()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
       </div>
-      <div class="footer">
+      <div class="mainContent">
+        <h1>About me and my background</h1>
+          <div class="staticBox">
+            <h2>As a highly motivated and adaptable learner, I utilize strong problem-solving skills to develop effective solutions to real-life problems and persevere in the face of any adversity to fulfill my end goal. I am passionate about expressing myself and take great pride in experimenting with art and technology to reach a synthesis that realizes my creative vision. My open-mindedness and appreciation for diversity allow me to communicate and collaborate with my colleagues effectively as I am motivated to learn from others as much as I am willing to teach others and exhibit my knowledge and technical expertise which ensures my involvement to count towards the betterment of the organization.</h2>
+            <h2>I have a wide range of interests, including map design, web design and mobile app development, as well as visual design and art. My motto is to create maps that reflect socioeconomic issues that are not only easy to understand but also pleasing to look at.</h2>
+          </div>
+        </div>
       <button class="scrollToTopBtn"><i class="fa fa-arrow-up"></i></button>
-      </div>
+      <footer>
+        <p>Created by Chiaki Matsuno 2021</p>
+      </footer>
     </div>
     <script src="script.js"></script>
   </body>

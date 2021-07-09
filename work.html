@@ -9,147 +9,144 @@
   <title>Chiaki Matsuno</title>
   </head>
   <body>
-    <div class="popup">
-      <header>
-        <span>Contact Me</span>
-        <div class="close"><i class="uil uil-times"></i></div>
-      </header>
-      <div class="content">
-        <p>You can reach me at the following:</p>
-        <ul class="icons">
-          <a href="https://www.linkedin.com/in/cmatsu/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/cmatsu" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="mailto:cmatsu3201@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-          <a href="tel:206-696-0507"><i class="fas fa-phone-alt" target="_blank"></i></a>
-        </ul>
-        <!-- <p>My resume is available in PDF format <a href="#enterlinkhere">here</a>.</p> -->
-        <!-- <div id="resumeBtnContainer">
-          <button class="resumeBtn">GIS</button>
-          <button class="resumeBtn">Visual Design</button>
-        </div> -->
+      <div id="popup">
+        <header>
+          <span>Contact Me</span>
+          <div class="close" onclick="toggle()"><i class="uil uil-times"></i></div>
+        </header>
+        <div class="content">
+          <p>You can reach me at the following:</p>
+          <ul class="icons">
+            <a href="https://www.linkedin.com/in/cmatsu/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/cmatsu" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:cmatsu3201@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="tel:206-696-0507"><i class="fas fa-phone-alt" target="_blank"></i></a>
+          </ul>
+          <!-- <p>My resume is available in PDF format <a href="#enterlinkhere">here</a>.</p> -->
+        </div>
       </div>
-    </div>
-    <div class="navbar">
-      <!-- <div><img class="logo" src="images/favicon.png" alt="logo"></div> -->
-      <div class="navLinks" id="nav">
-        <a href="index.html" class="btn">Home</a>
-        <!-- <a href="about.html" class="btn">About</a> -->
-        <a href="work.html" class="btn active">Work</a>
-        <a href="#contact" class="btn contactBtn">Contact</a>
-        <a href="javascript:void(0);" class="burgMenu" onclick="sortNav()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="mainContent">
-      <h1>Work Archive</h1>
-      <p>All of my work is archived below. Feel free to use the filter buttons to see work specific to a tag.</p>
-      <p>Clicking an item will take you to the website or dedicated page for that project.</p>
-          <!-- MAIN (Center website) -->
-          <div class="workGallery">
-          <div id="filterBtnContainer">
-            <button class="filterBtn active" onclick="filterSelection('all')"> show all</button>
-            <button class="filterBtn" onclick="filterSelection('gis')"> gis</button>
-            <button class="filterBtn" onclick="filterSelection('design')"> design</button>
-            <button class="filterBtn" onclick="filterSelection('art')"> art</button>
+      <div class="container" id="blur">
+        <div class="navbar">
+          <!-- <div><img class="logo" src="images/favicon.png" alt="logo"></div> -->
+          <div class="navLinks" id="nav">
+            <a href="index.html" class="btn active">Home</a>
+            <!-- <a href="about.html" class="btn">About</a> -->
+            <a href="work.html" class="btn">Work</a>
+            <a href="#contact" onclick="toggle()" class="btn contactBtn">Contact</a>
+            <a href="javascript:void(0);" class="burgMenu" onclick="sortNav()">
+              <i class="fa fa-bars"></i>
+            </a>
           </div>
-          <!-- Portfolio  Grid -->
-          <div class="row">
-            <div class="filterColumn gis design">
-              <a href="https://cmatsu.github.io/TGIS505Lab3/"><div class="box">
-              <div class="fill"><img src="images/hexbin.png" alt="" style="width:100%"></div>
-              <h3>Using Hexbins for Density Mapping</h3>
-              <p>Used ArcGIS Pro and Mapbox to compare point cluster with hexbin mapping techniques with data of fire occurrences across the US and the state of Florida from 1984 to 2018.</p>
-              </div></a>
-            </div>
-            <div class="filterColumn gis design">
-              <a href="https://cmatsu.github.io/TGIS505Lab2/"><div class="box">
-              <div class="fill"><img src="images/mcdonalds.png" alt="Schools and McDonalds Restaurants in Tacoma, Washington" style="width:100%"></div>
-              <h3>Schools and McDonalds in Tacoma, WA</h3>
-              <p>Designed a map showing the locations of schools and McDonalds to assess children's accessibility to fast food. Used Mapbox for stylizing the map, and all icons for this map were designed using Procreate and Inkscape.</p>
-              </div></a>
-            </div>
-            <div class="filterColumn gis">
-              <a href="https://cmatsu.github.io/TGIS506Lab2/"><div class="box">
-              <div class="fill"><img src="images/sugarland.png" alt="Flood Risk Vulnerability Assessment in Sugar Land, Texas" style="width:100%"></div>
-              <h3>Flood Risk Vulnerability in Sugar Land, TX</h3>
-              <p>Designed an interactive map using ArcGIS Pro and ArcGIS Online to compare FEMA flood risk data with Social Vulnerability Index data in the city of Sugar Land, Texas.</p>
-              </div></a>
-            </div>
-            <div class="filterColumn gis">
-              <a href="https://cmatsu.github.io/TGIS503Lab4/" target="_blank">
-              <div class="box">
-                <div class="fill"><img src="images/equity.png" alt="Racial and Social Equity in Seattle" style="width:100%"></div>
-                <h3>Racial and Social Equity in Seattle</h3>
-                <p>Designed a website featuring interactive equity maps created with Mapbox. These maps were designed to represent spatial analysis of racial and socioeconomic Seattle census tract data.</p>
-              </div></a>
-            </div>
-            <div class="filterColumn art">
-              <a href="gecko.html"><div class="box">
-              <div class="fill"><img src="images/fantasia.png" alt="Commission for Gecko Afterlife" style="width:100%"></div>
-              <h3>Commission for Gecko Afterlife</h3>
-              <p>Designed cover art and created a mascot character for independent musician Gecko Afterlife's artist persona using Procreate. The character design was later evaluated in a character sheet style piece of artwork.</p>
-            </div></a>
-            </div>
-            <div class="filterColumn gis design">
-              <a href="mappingme.html"><div class="box">
-              <div class="fill"><img src="images/mappingme.png" alt="Mapping Me" style="width:100%"></div>
-              <h3>Mapping Me</h3>
-              <p>Designed a map that tells a spatial story of where I lived growing up, inspired by Hong Kong's subway system maps using Procreate. Every line represents a country I lived in and every stop represents a memorable location.</p>
-            </div></a>
-            </div>
-            <div class="filterColumn gis">
-              <a href="https://cmatsu.github.io/TGIS503Lab2/pt2.html" target="_blank">
-              <div class="box">
-              <div class="fill"><img src="images/medical.png" alt="Median Income and Medical Facility Access by King County Census Tracts" style="width:100%"></div>
-              <h3>Income and Medical Access in King County</h3>
-              <p>Designed a website featuring interactive choropleth maps created with Leaflet.js. This map shows the relationship between median income and medical facility access based on King County census data.</p>
-              </div></a>
-            </div>
-            <div class="filterColumn gis">
-              <a href="https://seattlespatialstories.wordpress.com/group-9-tour-title/" target="_blank">
-              <div class="box">
-              <div class="fill"><img src="images/caphill.png" alt="A History of the Music Scene in Capitol Hill" style="width:100%"></div>
-              <h3>A History of the Music Scene in Capitol Hill</h3>
-              <p>Designed a self guided tour to showcase the history of Capitol Hill's music scene using WordPress. The theme of this page was inspired by the iconic rainbow crosswalks of the neighborhood.</p>
-              </div></a>
-            </div>
-            <div class="filterColumn gis">
-              <a href="/transit.html"><div class="box">
-                <div class="fill"><img src="images/transit.png" alt="Public Transit Accessibility in Low-Income Census Tracts" style="width:100%"></div>
-                <h3>Transit Accessibility in Low-Income Neighborhoods</h3>
-                <p>Designed an informative map poster showing public transit accessibility in low income census tracts. Used ArcGIS to develop a Transit Accessibility Factor and generated maps to reflect which areas received the most frequent and proportional service.</p>
-              </div></a>
-            </div>
+        </div>
+        <div class="mainContent">
+          <h1>Work Archive</h1>
+          <p>All of my work is archived below. Feel free to use the filter buttons to see work specific to a tag.</p>
+          <p>Clicking an item will take you to the website or dedicated page for that project.</p>
+              <!-- MAIN (Center website) -->
+              <div class="workGallery">
+              <div id="filterBtnContainer">
+                <button class="filterBtn active" onclick="filterSelection('all')"> show all</button>
+                <button class="filterBtn" onclick="filterSelection('gis')"> gis</button>
+                <button class="filterBtn" onclick="filterSelection('design')"> design</button>
+                <button class="filterBtn" onclick="filterSelection('art')"> art</button>
+              </div>
+              <!-- Portfolio  Grid -->
+              <div class="row">
+                <div class="filterColumn gis design">
+                  <a href="https://cmatsu.github.io/TGIS505Lab3/"><div class="box">
+                  <div class="fill"><img src="images/hexbin.png" alt="" style="width:100%"></div>
+                  <h3>Using Hexbins for Density Mapping</h3>
+                  <p>Used ArcGIS Pro and Mapbox to compare point cluster with hexbin mapping techniques with data of fire occurrences across the US and the state of Florida from 1984 to 2018.</p>
+                  </div></a>
+                </div>
+                <div class="filterColumn gis design">
+                  <a href="https://cmatsu.github.io/TGIS505Lab2/"><div class="box">
+                  <div class="fill"><img src="images/mcdonalds.png" alt="Schools and McDonalds Restaurants in Tacoma, Washington" style="width:100%"></div>
+                  <h3>Schools and McDonalds in Tacoma, WA</h3>
+                  <p>Designed a map showing the locations of schools and McDonalds to assess children's accessibility to fast food. Used Mapbox for stylizing the map, and all icons for this map were designed using Procreate and Inkscape.</p>
+                  </div></a>
+                </div>
+                <div class="filterColumn gis">
+                  <a href="https://cmatsu.github.io/TGIS506Lab2/"><div class="box">
+                  <div class="fill"><img src="images/sugarland.png" alt="Flood Risk Vulnerability Assessment in Sugar Land, Texas" style="width:100%"></div>
+                  <h3>Flood Risk Vulnerability in Sugar Land, TX</h3>
+                  <p>Designed an interactive map using ArcGIS Pro and ArcGIS Online to compare FEMA flood risk data with Social Vulnerability Index data in the city of Sugar Land, Texas.</p>
+                  </div></a>
+                </div>
+                <div class="filterColumn gis">
+                  <a href="https://cmatsu.github.io/TGIS503Lab4/" target="_blank">
+                  <div class="box">
+                    <div class="fill"><img src="images/equity.png" alt="Racial and Social Equity in Seattle" style="width:100%"></div>
+                    <h3>Racial and Social Equity in Seattle</h3>
+                    <p>Designed a website featuring interactive equity maps created with Mapbox. These maps were designed to represent spatial analysis of racial and socioeconomic Seattle census tract data.</p>
+                  </div></a>
+                </div>
+                <div class="filterColumn art">
+                  <a href="gecko.html"><div class="box">
+                  <div class="fill"><img src="images/fantasia.png" alt="Commission for Gecko Afterlife" style="width:100%"></div>
+                  <h3>Commission for Gecko Afterlife</h3>
+                  <p>Designed cover art and created a mascot character for independent musician Gecko Afterlife's artist persona using Procreate. The character design was later evaluated in a character sheet style piece of artwork.</p>
+                </div></a>
+                </div>
+                <div class="filterColumn gis design">
+                  <a href="mappingme.html"><div class="box">
+                  <div class="fill"><img src="images/mappingme.png" alt="Mapping Me" style="width:100%"></div>
+                  <h3>Mapping Me</h3>
+                  <p>Designed a map that tells a spatial story of where I lived growing up, inspired by Hong Kong's subway system maps using Procreate. Every line represents a country I lived in and every stop represents a memorable location.</p>
+                </div></a>
+                </div>
+                <div class="filterColumn gis">
+                  <a href="https://cmatsu.github.io/TGIS503Lab2/pt2.html" target="_blank">
+                  <div class="box">
+                  <div class="fill"><img src="images/medical.png" alt="Median Income and Medical Facility Access by King County Census Tracts" style="width:100%"></div>
+                  <h3>Income and Medical Access in King County</h3>
+                  <p>Designed a website featuring interactive choropleth maps created with Leaflet.js. This map shows the relationship between median income and medical facility access based on King County census data.</p>
+                  </div></a>
+                </div>
+                <div class="filterColumn gis">
+                  <a href="https://seattlespatialstories.wordpress.com/group-9-tour-title/" target="_blank">
+                  <div class="box">
+                  <div class="fill"><img src="images/caphill.png" alt="A History of the Music Scene in Capitol Hill" style="width:100%"></div>
+                  <h3>A History of the Music Scene in Capitol Hill</h3>
+                  <p>Designed a self guided tour to showcase the history of Capitol Hill's music scene using WordPress. The theme of this page was inspired by the iconic rainbow crosswalks of the neighborhood.</p>
+                  </div></a>
+                </div>
+                <div class="filterColumn gis">
+                  <a href="/transit.html"><div class="box">
+                    <div class="fill"><img src="images/transit.png" alt="Public Transit Accessibility in Low-Income Census Tracts" style="width:100%"></div>
+                    <h3>Transit Accessibility in Low-Income Neighborhoods</h3>
+                    <p>Designed an informative map poster showing public transit accessibility in low income census tracts. Used ArcGIS to develop a Transit Accessibility Factor and generated maps to reflect which areas received the most frequent and proportional service.</p>
+                  </div></a>
+                </div>
 
-            <!--
+                <!--
 
-            <div class="filterColumn art">
-              <a href=""><div class="box">
-                <div class="fill"><img src="images/img.png" alt="Car" style="width:100%"></div>
-                <h3>Racial and Social Equity in Seattle</h3>
-                <p>Designed a website featuring interactive equity maps created with Mapbox. These maps were designed to represent spatial analysis of racial and socioeconomic Seattle census tract data.</p>
-              </div></a>
-            </div>
+                <div class="filterColumn art">
+                  <a href=""><div class="box">
+                    <div class="fill"><img src="images/img.png" alt="Car" style="width:100%"></div>
+                    <h3>Racial and Social Equity in Seattle</h3>
+                    <p>Designed a website featuring interactive equity maps created with Mapbox. These maps were designed to represent spatial analysis of racial and socioeconomic Seattle census tract data.</p>
+                  </div></a>
+                </div>
 
-            <div class="filterColumn art">
-              <a href=""><div class="box">
-              <div class="fill"><img src="images/img.png" alt="Car" style="width:100%"></div>
-              <h3>Racial and Social Equity in Seattle</h3>
-              <p>Designed a website featuring interactive equity maps created with Mapbox. These maps were designed to represent spatial analysis of racial and socioeconomic Seattle census tract data.</p>
-            </div></a>
-            </div> -->
-          <!-- END GRID -->
+                <div class="filterColumn art">
+                  <a href=""><div class="box">
+                  <div class="fill"><img src="images/img.png" alt="Car" style="width:100%"></div>
+                  <h3>Racial and Social Equity in Seattle</h3>
+                  <p>Designed a website featuring interactive equity maps created with Mapbox. These maps were designed to represent spatial analysis of racial and socioeconomic Seattle census tract data.</p>
+                </div></a>
+                </div> -->
+              <!-- END GRID -->
+              </div>
+
+              <!-- END MAIN -->
+        </div>
           </div>
-
-          <!-- END MAIN -->
-    </div>
+        <button class="scrollToTopBtn"><i class="fa fa-arrow-up"></i></button>
+        <footer>
+          <p>Created by Chiaki Matsuno 2021</p>
+        </footer>
       </div>
-      <div class="footer">
-      <button class="scrollToTopBtn"><i class="fa fa-arrow-up"></i></button>
-      </div>
-    </div>
     <script src="filter.js"></script>
     <script src="script.js"></script>
   </body>
