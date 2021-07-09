@@ -9,10 +9,10 @@
   <title>Chiaki Matsuno</title>
   </head>
   <body>
-    <div id="popup">
+    <div class="popup">
       <header>
         <span>Contact Me</span>
-        <div class="close" onclick="toggle()"><i class="uil uil-times"></i></div>
+        <div class="close"><i class="uil uil-times"></i></div>
       </header>
       <div class="content">
         <p>You can reach me at the following:</p>
@@ -25,43 +25,40 @@
         <!-- <p>My resume is available in PDF format <a href="#enterlinkhere">here</a>.</p> -->
       </div>
     </div>
-    <div class="container" id="blur">
-      <div class="navbar">
-        <!-- <div><img class="logo" src="images/favicon.png" alt="logo"></div> -->
-        <div class="navLinks" id="nav">
-          <a href="index.html" class="btn active">Home</a>
-          <!-- <a href="about.html" class="btn">About</a> -->
-          <a href="work.html" class="btn">Work</a>
-          <a href="#contact" onclick="toggle()" class="btn contactBtn">Contact</a>
-          <a href="javascript:void(0);" class="burgMenu" onclick="sortNav()">
-            <i class="fa fa-bars"></i>
-          </a>
-        </div>
+    <div class="navbar">
+      <!-- <div><img class="logo" src="images/favicon.png" alt="logo"></div> -->
+      <div class="navLinks" id="nav">
+        <a href="/index.html" class="btn">Home</a>
+        <!-- <a href="about.html" class="btn">About</a> -->
+        <a href="/work.html" class="btn active">Work</a>
+        <a href="#contact" class="btn contactBtn">Contact</a>
+        <a href="javascript:void(0);" class="burgMenu" onclick="sortNav()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
-      <div class="mainContent">
-        <h1>Work Archive</h1>
-          <div class="staticBox">
-            <h2>Commission for Gecko Afterlife</h2>
-            <div class="row">
-              <div class="column">
-                <div class="fill"><img src="images/fantasia.png" alt="Gecko in Fantasia cover art" style="width:100%"></div>
-                <p><i>Gecko in Fantasia</i> cover art</p>
-              </div>
-              <div class="column">
-                <div class="fill"><img src="images/gapow.png" alt="Mascot character sheet" style="width:100%"></div>
-                <p>Mascot character sheet</p>
-              </div>
-            </div>
-            <p>I was given the opportunity to design the album cover art for artist Gecko Afterlife's newest release, <i>Gecko in Fantasia</i>. Using Procreate, I created a gecko mascot character to feature in the artwork and developed the final album art around it. Afterwards I received another opportunity to expand on this character design by creating a character sheet style illustration.</p>
-          </div>
-          <a href="/work.html" class="pageBtn"><p>return to see all projects</p></a>
-        </div>
-      <button class="scrollToTopBtn"><i class="fa fa-arrow-up"></i></button>
-      <footer>
-        <p>Created by Chiaki Matsuno 2021</p>
-      </footer>
     </div>
-  
+    <div class="mainContent">
+      <h1>Work Archive</h1>
+        <div class="staticBox">
+          <h2>Commission for Gecko Afterlife</h2>
+          <div class="row">
+            <div class="column">
+              <div class="fill"><img src="images/fantasia.png" alt="Gecko in Fantasia cover art" style="width:100%"></div>
+              <p><i>Gecko in Fantasia</i> cover art</p>
+            </div>
+            <div class="column">
+              <div class="fill"><img src="images/gapow.png" alt="Mascot character sheet" style="width:100%"></div>
+              <p>Mascot character sheet</p>
+            </div>
+          </div>
+          <p>I was given the opportunity to design the album cover art for artist Gecko Afterlife's newest release, <i>Gecko in Fantasia</i>. Using Procreate, I created a gecko mascot character to feature in the artwork and developed the final album art around it. Afterwards I received another opportunity to expand on this character design by creating a character sheet style illustration.</p>
+        </div>
+        <a href="/work.html" class="pageBtn"><p>return to see all projects</p></a>
+      </div>
+      <div class="footer">
+      <button class="scrollToTopBtn"><i class="fa fa-arrow-up"></i></button>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
