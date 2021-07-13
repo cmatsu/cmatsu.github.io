@@ -1,28 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Offside&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Varela Round", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
-  background-color: #fefaef;
+  background-color: #fffaee;
   text-align: center;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  color: #323031;
 }
 
-h1, h3, .navLinks a {
-/* font-family: "Montserrat", sans-serif; */
-  font-family: "Offside", cursive;
+h1, h3, span, .navLinks a, a.pageBtn p, footer p, .image__title{
+  font-family: "Montserrat", sans-serif;
+}
+
+h1, h3, .image__title {
+  font-weight: 500;
 }
 
 h1 {
@@ -34,6 +52,9 @@ h2 {
   font-weight: normal;
 }
 
+p {
+  line-height: 20pt;
+}
 
 ::-webkit-scrollbar {
   display: none;
@@ -84,13 +105,12 @@ h2 {
 
   a.btn.contactBtn, a.btn.contactBtn.active {
     color: #383f41;
-    background-color: #fff64f;
+    background-color: #fffbb3;
     border-radius: 3.125em;
   }
 
   a:hover.btn.contactBtn {
-    color: #383f41;
-    background-color: #fffbb3;
+    background-color: #eeea9d;
   }
 
   .navLinks a {
@@ -110,6 +130,7 @@ h2 {
     background-color: #71a8f9;
     border-radius: 3.125em;
     padding: 0 15px 0 15px;
+    margin-bottom: 1.5em;
   }
 
   .pageBtn p {
@@ -190,8 +211,9 @@ h2 {
       display: block;
       text-align: left;
     }
-    footer {
-      margin-top: 3em;
+
+    footer > p {
+      margin: 30px 0 30px 0;
     }
 
     .scrollToTopBtn {
@@ -239,66 +261,134 @@ h2 {
     }
 
   footer {
-    display: flex;
-    justify-content: flex-end;
-    padding: 16px;
-    margin-bottom: 20px;
+    font-size: 13pt;
+    margin-bottom: 40px;
   }
 
   /* grid */
-  .main {
-    max-width: 1000px;
-    margin: auto;
-    box-sizing: border-box;
+  .grid {
+    margin: 50px 0 50px 0;
+    --repeatCols: auto-fit;
   }
 
-  .row {
-    margin: 8px -16px;
-    box-sizing: border-box;
+  @media (max-width: 767px) {
+    .grid {
+      --repeatCols: 1;
+    }
 
+    .image, .image__title, .image__description  {
+      max-height: calc(width * 0.75);
+    }
+
+    .image__title {
+        font-size: 24pt;
+    }
+
+    .image__description {
+        font-size: 12pt;
+    }
+  }
+  @media (min-width: 768px) {
+    .grid {
+      --repeatCols: 2;
+    }
+
+    .image, .image__title, .image__description  {
+
+    }
+
+    .image__title {
+        font-size: 18pt;
+    }
+
+    .image__description {
+        font-size: 12pt;
+    }
   }
 
-  .item {
-    padding: 0px;
-    margin: 0px;
+  @media only screen and (min-width: 768px) and (max-width: 850px) {
+    .image, .image__title, .image__description  {
+
+    }
   }
 
-  h3 {
-    margin-top: 1em;
-    margin-bottom: 1em;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(var(--repeatCols, auto-fit), minmax(300px, 1fr));
+    grid-gap: 30px;
   }
 
-  /* Add padding BETWEEN each column */
-  .row,
-  .row > .column {
-    padding: 8px;
+  .image, .image__overlay {
+    display: flex;
+    border-radius: 1em;
+    position: relative;
   }
 
-  .row,
-  .row > .filterColumn {
-    padding: 8px;
+  .image {
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
   }
 
-  /* Create four equal columns that floats next to each other */
-  .column, .filterColumn {
-    float: left;
-    width: 50%;
-    box-sizing: border-box;
+  .image:before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    padding-bottom: calc(3/4 * 100%);
+  }
+
+  .image__img {
+    display: block;
+    border-radius: 1em;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .image__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ffffff;
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.25s;
+  }
+
+  .image__overlay--blur {
+      backdrop-filter: blur(3px);
+  }
+
+  .image__overlay > * {
+      transform: translateY(20px);
+      transition: transform 0.25s;
+  }
+
+  .image__overlay:hover {
+      opacity: 1;
+  }
+
+  .image__overlay:hover > * {
+      transform: translateY(0);
+  }
+
+  .image__title {
+      padding: 15px;
+  }
+
+  .image__description {
+      margin-top: 0.25em;
+      padding: 15px;
   }
 
   .filterColumn {
     display: none; /* Hide all elements by default */
-  }
-
-  /* Clear floats after rows */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .workGallery {
-    margin-top: 20px;
-
   }
 
   /* The "show" class is added to the filtered elements */
@@ -317,6 +407,8 @@ h2 {
     box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
   }
   .filterBtn {
+    font-size: 11pt;
+    font-weight: normal;
     background-color: #ffffff;
   }
 
@@ -340,24 +432,11 @@ h2 {
     color: #ffffff;
   }
 
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 767px) {
-    .column, .filterColumn {
-      width: 100%;
-    }
+  #filterBtnContainer {
+    padding: 20px 0 20px 0;
   }
 
-
-
-  .boxContents {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .box, .staticBox {
+  .staticBox {
     display: flex;
     flex-direction: column;
     box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
@@ -365,45 +444,8 @@ h2 {
     box-sizing: border-box;
     background-color: #ffffff;
     transition: transform .2s;
-  }
-
-  .box {
-    min-height: 300px;
-    max-height: 500px;
-    padding: 15px;
-  }
-
-  .staticBox {
     padding: 30px 50px;
-  }
-
-  a > .box {
-    color: #4a2e17;
-  }
-  a:hover > .box {
-    color: #78604d;
-  }
-
-  .staticBox {
     margin-bottom: 2.5em;
-  }
-  .box:hover {
-    transform: scale(1.015); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
-
-  .fill {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    min-height: 100px;
-  }
-
-  .fill img {
-      flex-shrink: 0;
-      min-width: 100%;
-      min-height: 100%
   }
 
   /*modal*/
@@ -465,7 +507,6 @@ h2 {
     top: 50%;
     opacity: 1;
     pointer-events: auto;
-
     transform:translate(-50%, -50%) scale(1);
     transition: top 0s 0s ease-in-out,
                 opacity 0.2s 0s ease-in-out,
@@ -545,11 +586,11 @@ h2 {
   }
   /* github */
   .icons a:nth-child(2){
-    color: #000000;
+    color: #323031;
     border-color: #a8a8a8;
   }
   .icons a:nth-child(2):hover{
-    background: #000000;
+    background: #323031;
   }
   /* mail */
   .icons a:nth-child(3){
@@ -575,7 +616,6 @@ h2 {
   .icons a:hover i{
     transform: scale(1.2);
   }
-
   .content .field{
     margin: 12px 0 -5px 0;
     height: 45px;
