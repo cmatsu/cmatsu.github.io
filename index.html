@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="images/favicon.png" type="image/png">
-  <title>Chiaki Matsuno - Home</title>
+  <title>Home | Chiaki Matsuno</title>
 
   </head>
   <body>
@@ -32,7 +32,7 @@
         <div class="navLinks" id="nav">
           <a href="index.html" class="btn active">Home</a>
           <a href="about.html" class="btn">About</a>
-          <a href="work.html" class="btn">Work</a>
+          <a href="projects.html" class="btn">Projects</a>
           <a href="gallery.html" class="btn">Gallery</a>
           <a href="#" onclick="toggle()" class="btn contactBtn" id="contact">Contact</a>
           <a href="javascript:void(0);" class="burgMenu" onclick="sortNav()">
@@ -41,16 +41,21 @@
         </div>
       </div>
       <div class="mainContent">
-        <h1>Hi, I'm Chiaki. Welcome to my portfolio!</h1>
+        <h1 class="welcome" id="about">Hi, I'm Chiaki. Welcome to my portfolio!</h1>
         <div class="staticBox">
-          <h2>I'm a graduate student at UW Tacoma studying <b>Master's of Science in Geospatial Technologies</b> set to graduate in August of 2020. I previously graduated from UW Seattle in Spring 2020 with a <b>Bachelor of Arts in Geography</b>.</h2>
-          <br>
-          <h2>My interests are designing solutions to enhance user experiences, as well as creating maps that illustrate lived experiences and identify societal problems.</h2>
-          <!-- <p>You can read more about me <a href="about.html">here</a></p> -->
+          <div class="profile">
+            <img src="images/profile.png" alt="A photo of Chiaki" class="curve">
+          <p>I am a meticulous and highly driven designer and cartographer who graduated in Summer 2021 from UW Tacoma with a <span class="emphasis">Master's of Science in Geospatial Technologies</span>.</p><br>
+          <p>I am passionate about creating GIS and design solutions with a focus on equity and accessibility.</p><br>
+          <!-- <p>My goal is to combine my design and analytical skills to develop solutions that empathize with users without compromising style. I have successfully planned and executed various design sprints, both independently and leading group projects, as well as have strong problem solving skills and persevere to troubleshoot complex obstacles.</p><br> -->
+          </div>
+          <div><a href="about.html" class="pageBtn aboutMe"><p>Learn more about me</p></a></div>
         </div>
+
+
+
+        <h1>Recent Projects</h1>
         <div id="highlights">
-          <h1>Work Highlights</h1>
-          <p>Below are some of my most notable projects.</p>
           <p>Hover over to see project details and click for more information.</p>
           <!-- Portfolio Gallery Grid -->
           <div class="grid">
@@ -89,6 +94,64 @@
           </a>
         </div>
         </div>
+        <a href="projects.html" class="pageBtn viewProjects"><p>View all projects</p></a>
+        <div id="skills"><h1>Skills</h1>
+        <div class="row">
+          <div class="col" style="background-color:#fff;">
+            <p class="emphasis">GIS & Mapping</p><br><span><i class="fa fa-globe-americas fa-3x"></i></span><br>
+
+            <div class="listSkill">
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-leaf fa-lg"></i></span>Leaflet JS</li>
+              <li><span class="fa-li"><i class="fas fa-plane fa-lg"></i></span>LiDAR Analysis</li>
+              <li><span class="fa-li"><i class="fas fa-database fa-lg"></i></span>Database Management</li>
+              <li><span class="fa-li"><i class="fas fa-check-square fa-lg"></i></span>Enterprise GIS</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col" style="background-color:#fff;">
+          <p class="emphasis">Programming</p><br>  <span><i class="fa fa-laptop-code fa-3x"></i></span><br>
+
+            <div class="listSkill">
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fab fa-html5 fa-lg"></i></span>HTML</li>
+                <li><span class="fa-li"><i class="fab fa-css3-alt fa-lg"></i></span>CSS</li>
+                <li><span class="fa-li"><i class="fab fa-js-square fa-lg"></i></span>JavaScript</li>
+                <li><span class="fa-li"><i class="fab fa-react fa-lg"></i></span>React</li>
+                <li><span class="fa-li"><i class="fab fa-python fa-lg"></i></span>Python</li>
+                <li><span class="fa-li"><i class="fab fa-r-project fa-lg"></i></span>R</li>
+            </ul>
+            </div>
+          </div>
+
+          <div class="col" style="background-color:#fff;">
+          <p class="emphasis">UX / UI Design</p><br>  <span><i class="fa fa-drafting-compass fa-3x"></i></span><br>
+
+            <div class="listSkill">
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fab fa-figma fa-lg"></i></span>Figma</li>
+                <li><span class="fa-li"><i class="fas fa-sitemap fa-lg"></i></span>Information Architecture</li>
+                <li><span class="fa-li"><i class="fas fa-check-square fa-lg"></i></span>Usability Testing</li>
+                <li><span class="fa-li"><i class="fas fa-check-square fa-lg"></i></span>Design Studio</li>
+                <li><span class="fa-li"><i class="fas fa-check-square fa-lg"></i></span>Time Boxing</li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="col" style="background-color:#fff;">
+
+            <p class="emphasis">Soft Skills</p><br><span><i class="fa fa-camera-retro fa-3x"></i></span><br>
+
+            <div class="listSkill">
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check-square fa-lg"></i></span>fadfafa</li>
+                <li><span class="fa-li"><i class="fas fa-check-square fa-lg"></i></span>fdfafafa</li>
+                <li><span class="fa-li"><i class="fas fa-check-square fa-lg"></i></span>fdafafada</li>
+              </ul>
+            </div>
+          </div> -->
+        </div>
+      </div>
       </div>
     </div>
     <button class="scrollToTopBtn"><i class="fa fa-arrow-up"></i></button>
